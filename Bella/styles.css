@@ -1,0 +1,320 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, asidealert(message), canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+	background: url('pic/bg.jpg');
+}
+h2{
+/*fontalert(message)-family: Lobster;*/
+	font-family: Lobster;
+	font-size: 40px;
+	color: red;
+}
+h3{
+/*fontalert(message)-family: Lobster;*/
+	font-family: Lobster;
+	font-size: 35px;
+	color: #757575;
+	text-align: right;
+    padding-right: 16px;
+}
+a{
+	text-decoration: none;
+}
+#wrapper{
+	width: 980px;
+	margin: 0 auto;
+}
+#head-nav{
+	float: right;
+	padding-top: 10px;
+}
+#head-nav ul li{
+	display: inline-block;
+	padding-left: 10px;
+	background: url(pic/listbg.png) no-repeat 0px 5px;
+}
+	#head-nav ul li:first-child{
+		background: none;
+	}
+	#head-nav ul li a{
+		color: #7b7b7b;
+		font-family: Tahoma;
+	}
+#main-nav{
+	background: url('pic/navcolor.png') repeat-x;
+	border-radius: 40px;
+	height: 39px;
+	padding-left: 25px;
+}
+	#main-nav ul li{
+		display: inline-block;
+		padding-right: 16px;
+		padding-left: 16px;
+		border-right: 1px solid  #616161;
+		border-left: 1px solid #9a9a9a;
+		margin-left: -4px;
+		height: 39px;
+
+	}
+	#main-nav ul li a{
+		color: #fff;
+		line-height: 33px;
+	}
+#logo{
+	margin: 0 auto;
+	width: 30%;
+}
+.clear{
+	content: "";
+	display: block;
+	clear: both;
+}
+#nav-shadow{
+	background: url('pic/shadow.png') no-repeat;
+	height:21px;
+	margin-top: 1px;
+}
+.col{
+	display: inline-block;
+	width: 30%;
+}
+.whitebox {
+	border-radius: 10px;
+	background-color: #fff;
+	box-shadow: 0px 1px 1px #888888;
+}
+#forUs {
+	display: inline-block;
+	width: 610px;
+	height: 320px;
+	padding: 5px;
+	
+}
+	.greytext {
+		color: #666;
+		font-family: Arial;
+		font-size: 13px;
+    	line-height: 18px;
+	}
+	.redaccent {
+		color: #ff0000;
+		font-weight: bold;
+		font-size: 13px;
+		font-family: Arial;
+	}
+	#forUs p {
+		margin-left: 10px;
+		margin-right: 10px;
+		
+	}
+	#forUs h3{
+		font-family: Arial;
+		font-size: 28px;
+		font-weight: bold;
+		font-style: italic;
+		color: #848484;
+		text-align: center;
+	}
+	#choice_brand {
+		margin-top: -33px;
+	    margin-left: 236px;
+	}
+	#brand_choice {
+	background: url('pic/choice_back.png') repeat-x;
+    width: 200px;
+    height: 27px;
+    border-radius: 10px;
+    padding-left: 5px;
+	}
+#brands {
+	float: right;
+	width: 360px;
+	height: 330px;
+}
+	#brands img {
+	    margin: 8px;
+	    padding: 5px 8px 5px 10px;
+	}
+	#brands img:last-child {
+	    margin-left: 60px;
+	}
+#news {
+	display: inline-block;
+	width: 480px;
+	margin-left: -40px;
+}	
+#news article {
+	width: 480px;
+	height: 128px;
+
+}
+#news article {
+    margin-bottom: 1px;
+}
+#news article figure img {
+	width: 74px;
+	height: 74px;
+	margin-left: -26px;
+    margin-top: -3px;
+}
+.imgnews {
+	padding-left: 13px;
+	margin-top: 12px;
+    margin-bottom: 13px;
+    display: inline-block;
+}
+.infonews {
+	display: inline-block;
+	width: 380px;
+	padding-left: 7px;
+    padding-top: 13px;
+}
+
+#recipe {
+	display: inline-block;
+    margin-left: 18px;
+    position: relative;
+    top: -25px;
+	}
+	#recipe article {
+		width: 240px;
+		height: 386px;
+		margin-left: -3px;
+		display: inline-block;
+
+	}
+	#recipe article figure img{
+	    margin-left: -28px;
+	    margin-top: 10px;
+	}
+	#recipe article div{
+		margin-left: 13px;
+		margin-right: 6px;
+	}
+	article div minutes {
+		position: relative;
+    	top: -21px;
+	}
+#bottomSection {
+	width: 980px;
+	margin: 0 auto; 
+}
+	#bottomSection ul {
+		padding: 0px;
+	}
+	#bottomSection ul li {
+		display: inline-block;
+		width: 315px;
+		height: 110px;
+		margin-right: 11px;
+	}	
+	#bottomSection ul li:last-child {
+		margin-right: 0px;
+	}
+	.picbottom{
+	    width: 100px;
+	    height: 95px;
+	    margin-top: 15px;
+	    margin-left: 5px;
+	}
+
+	#bottomSection ul li div {
+		margin-top: -9px;
+	}
+	.align {
+		display: inline-block;
+	    width: 200px;
+	    margin-left: 5px;
+	}
+	.alignP {
+		text-align: right;
+		margin-right: 20px;
+		margin-top: -23px;
+	}
+
+#bottomslogon{
+	    margin-top: 50px;
+}
+	.bsLittle {
+		font-family: Lobster;
+		font-size: 25px;
+	    color: red;
+	    padding-left: 75px;
+	    margin-bottom: -21px;
+	}
+	.bsBig {
+		font-family: Lobster;
+		font-size: 94px;
+		color: #757575;
+		text-align: center;
+		margin-top: -10px;
+		margin-bottom: 21px;
+	}
+footer {
+	margin-left: -40px;
+	font-family: Tahoma;
+	font-size: 12px;
+}
+footer ul li {
+	display: inline-block;
+	border-left: 1px solid  #757575;
+}
+footer ul li:first-child {
+	border-left:none;
+}
+footer ul li:last-child {
+	border-left: none;
+	color:  #757575;
+	margin-left: 500px;
+}
+footer ul li a {
+	text-decoration: none;
+	color:  #757575;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+footer ul li a span {
+	font-weight: bold;
+}
