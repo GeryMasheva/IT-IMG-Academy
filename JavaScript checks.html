@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<form method="post" action="#">
+			<input type="number" id="num" placeholder="Enter a number ..."><br><br>
+			<input type="submit" id="submit" value="Chek Even or Odd" onclick="return CheckNumber()"> <br><br>
+			<input type="submit" id="division" value="Chek division by 5 and 7" onclick="return CheckDivision()"> <br><br>
+			<input type="submit" id="submit" value="Chek if third digit is 7 (right-to-left)" onclick="return CheckNumberSeven()"> <br><br>
+			
+			<input type="submit" id="submit" value="Chek prime" onclick="return CheckPrime()"> <br><br>
+			<input type="submit" id="submit" value="See the name of the digit " onclick="return NameDigit()"> <br><br>
+		</form>
+		<hr>
+		<form method="post" action="#">
+			<input type="number" id="width" placeholder="witdh ..."> 
+			<input type="number" id="height" placeholder="height ..."><br><br>
+			<input type="submit" id="submit" value="Rectangle’s area is" onclick="return RecAerea()"> <br><br>
+		</form>
+		<hr>
+
+		<hr>
+		<form method="post" action="#">
+			<input type="number" id="x" placeholder="x..."> 
+			<input type="number" id="y" placeholder="y ..."><br><br>
+			<input type="submit" id="submit" value="Is point in circle?" onclick="return CheckPoint()"> <br><br>
+		</form>
+		<hr>
+		<form method="post" action="#">
+			<p>wich number is bigger</p>
+			<input type="number" id="a" placeholder="a..."> 
+			<input type="number" id="b" placeholder="b..."><br><br>
+			<input type="submit" id="submit" value="Click" onclick="return CheckNum()"> <br><br>
+		</form>
+		<hr>
+		<form method="get" action="#">
+			<p>Write an if statement that examines two integer variables and exchanges their values if the first one is greater than the second one.</p>
+			<input type="number" id="m" placeholder="a..."> 
+			<input type="number" id="n" placeholder="b..."><br><br>
+			<input type="submit" id="submit" value="Check" onclick="return exchanges()"> <br><br>
+		</form>
+		<hr>
+		<form method="get" action="#">
+			<p>Write three number</p>
+			<input type="number" id="x1" placeholder="x..."> 
+			<input type="number" id="y1" placeholder="y...">
+			<input type="number" id="z1" placeholder="z...">
+			<p> Write a script that shows the sign (+ or -) of the product of three real numbers without calculating it. Use a sequence of if statements.
+			<input type="submit" id="submit" value="Check" onclick="return minusplus()"> <br>
+			</p>
+			<p>Write a script that finds the biggest of three integers using nested if statements.
+			<input type="submit" id="submit" value="Check" onclick="return Biggest()"> <br>
+			</p>
+		</form>
+		
+
+		<script>
+			function CheckNumber() {
+				var a = document.getElementById('num').value;
+				if (a % 2 == 0) {
+					alert ('The number is Odd')
+				}
+				else { alert('The number is Even')}
+			}
+
+			function RecAerea(){
+				var wid = document.getElementById('width').value;
+				var hei = document.getElementById('height').value;
+				var area = (wid * hei) ;
+				alert ('Rectangle area is '+ area);
+				
+			}
+
+
+			function CheckDivision (){
+				var d = document.getElementById('num').value;
+				if (d % 35 == 0){	
+					alert ('Number CAN be divided (without remainder) by 7 and 5 in the same time ');
+					return true;
+				}
+				else {
+					alert ('Number can NOT be divided (without remainder) by 7 and 5 in the same time ');
+					return fault;
+				}
+			}
+
+			function CheckNumberSeven() {
+				var x = document.getElementById('num').value;
+				var y = x/100;
+				var z = y%10;
+				z = Math.floor(z);
+				
+				if (z == 7 ) {
+					alert ('Third digit is seven.');
+				}
+				else {
+					alert ('The third digit in NOT seven');
+				}
+			}
+
+			function CheckPoint (){
+				var intX = document.getElementById('x').value;
+				var intY = document.getElementById('y').value;
+				var z = ((intX - 0) * (intX - 0) + (intY - 0) * (intY - 0) < 5 * 5);
+				alert (z) ;
+				if ((intX - 0) * (intX - 0) + (intY - 0) * (intY - 0) < 5 * 5) {
+					alert ('The point is in circle');
+				}
+				else {
+					alert ('The point in NOT in circle.');
+				}
+			}
+			function CheckPrime () {
+				var a = document.getElementById ('num').value;
+				if (a <= 0) {
+					alert ('Enter positive number');
+				}
+				else {
+					if (a <= 100) {
+						alert ('The number is Prime.');
+					}
+					else {
+						alert ('The number is NOT Prime.');
+					}
+				}
+			}	
+
+			function CheckNum (){
+				var a = document.getElementById ('a').value;
+				var b = document.getElementById('b').value;
+				var c = a - b;
+				if (c == 0) {
+					alert ('The numbers are equal.')
+				}
+					else {
+						
+						if (a>b) {
+							
+							alert ('The bigger number is '+ a +' !'+' The right grow up order is: '+ b + ' , '+ a);
+						}
+						else {
+							
+							alert ('The bigger number is '+ b +' !'+' The right grow up order is: '+ a + ' , '+ b);
+						}
+					}
+			}
+
+			function exchanges() {
+				var a = document.getElementById ('m').value;
+				var b = document.getElementById ('n').value;
+				if (a>b) {
+					c = a;
+					a = b;
+					alert ('There is exchange. a = ' + a +' and b = ' + c);
+				}
+				else{
+					alert ('There is NOT exchange. a = ' + a +' and b = ' + b);
+				}
+			}
+
+			function minusplus(){
+				var x = document.getElementById('x1').value;
+				var y = document.getElementById('y1').value;
+				var z = document.getElementById('z1').value;
+				if (x == 0 || y == 0 || z == 0) {
+					alert ('The product is 0 ');
+				}	
+				else {
+					if (x>0) {
+						if (y>0) {
+							if (z>0) {
+								alert ('The product is +');
+							}
+							else {
+								alert ('The product sign is -');
+							}
+						}
+						else {
+								alert ('The product sign is -');
+						}
+					}
+					else {
+						alert ('The product sign is -');
+					}
+				}
+			}
+
+			function Biggest(){
+				var x = document.getElementById('x1').value;
+				var y = document.getElementById('y1').value;
+				var z = document.getElementById('z1').value;
+				if (x==y==z) {
+					alert ('The three integers are the same. ');
+				}
+				else {
+					if (x==y) {
+						if (x>z) {
+							alert ('The bigest number is: '+ x );
+						}
+						else {
+							alert('The bigest number is: '+ z );
+						}
+					}
+					else {
+						if (y==z) {
+							if (x>y) {
+								alert ('The bigest number is: '+ x );
+							}
+							else {
+								alert('The bigest number is: '+ y );
+							}
+						}
+						else {
+							if (x>y) {
+								if (x>z) {
+									alert ('The bigest number is: '+ x );
+								}
+								else {
+									alert ('The bigest number is: '+ z );	
+									}
+							}
+							else {
+								if (y>z) {
+									alert ('The bigest number is: '+ y );
+								}
+								else {
+									alert ('The bigest number is: '+ z );
+								}
+							}
+						}
+					}
+				}
+			}
+
+			function NameDigit(){
+				var b = document.getElementById ("num").value;
+				//alert (b);
+				var a = parseInt (b);
+				var temp = "";
+				
+				switch (a)
+					{
+						case 0: temp = "zero"; break;
+						case 1: temp = "one"; break;
+						case 2: temp = "two"; break;
+						case 3: temp = "two"; break;
+						case 4: temp = "two"; break;
+						case 5: temp = "two"; break;
+						case 6: temp = "two"; break;
+						case 7: temp = "two"; break;
+						case 8: temp = "two"; break;
+						case 9: temp = "two"; break; 
+						case defaut : temp = "Enter a number betwin 0 and 9";
+					}
+					alert (temp);
+			}
+
+		</script>
+	</body>
+</html>
